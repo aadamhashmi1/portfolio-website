@@ -1,19 +1,22 @@
 // src/components/Projects.js
 import React from 'react';
 
+import image1image from '../img/image1.png';
+import image2image from '../img/image2.png';
 function Projects() {
+  
   const projects = [
     {
-      title: 'Project One',
-      description: 'A web application built with React.',
-      image: 'path-to-image', // Update with actual image paths
-      link: 'https://github.com/your-username/project-one'
+      title: 'TIC-TAC-TOE',
+      description: 'A fun TICTACTOE game made with JS.',
+      image: image1image, // Update with actual image paths
+      link: 'https://github.com/aadamhashmi1/Bootstrap-Website-main/tree/main/snake-game'
     },
     {
-      title: 'Project Two',
-      description: 'Another cool project using Tailwind CSS.',
-      image: 'path-to-image', // Update with actual image paths
-      link: 'https://github.com/your-username/project-two'
+      title: 'Snake-Game',
+      description: 'A fun Snake game made with JS.',
+      image: image2image, // Update with actual image paths
+      link: 'https://github.com/aadamhashmi1/Bootstrap-Website-main/tree/main/snake-game'
     },
     // Add more projects
   ];
