@@ -6,17 +6,18 @@ import Projects from '../components/Projects';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import ImageGallery from '../components/ImageGallery';
 
-const Home = () => ( 
-    
-    <div>
-      <Hero />
-      <Skills />
-      <Projects />
-      <About />
-      <Contact />
-      <Footer />
-    </div>
-  );
+const Home = () => (
+  <div>
+    <Hero />
+    <Skills />
+    <Projects />
+    <About />
+    <ImageGallery /> {/* Add the Image Gallery here */}
+    <Contact />
+    <Footer />
+  </div>
+);
 
 export default Home;
