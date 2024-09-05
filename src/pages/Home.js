@@ -10,6 +10,7 @@ import ImageGallery from '../components/ImageGallery';
 
 const Home = () => (
   <div>
+    
     <Hero />
     <ImageGallery /> {/* Add the Image Gallery here */}
 
