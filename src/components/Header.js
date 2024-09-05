@@ -11,6 +11,7 @@ const Header = () => (
         <Link to="/projects" className="hover:underline">Projects</Link>
         <Link to="/about" className="hover:underline">About</Link>
         <Link to="/contact" className="hover:underline">Contact</Link>
+        <Link to="/gallery" className="hover:underline">Image Gallery</Link> {/* Add the Image Gallery link */}
         <ThemeToggle />
       </div>
     </nav>
