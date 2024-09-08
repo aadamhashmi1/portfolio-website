@@ -72,3 +72,6 @@ a {
   grid-row: span 3; /* Span 3 rows */
   grid-column: span 2; /* Span 2 columns */
 }
+html {
+  scroll-behavior: smooth;
+}

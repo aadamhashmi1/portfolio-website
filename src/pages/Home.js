@@ -6,18 +6,24 @@ import Projects from '../components/Projects';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import ImageGallery from '../components/ImageGallery';
+
 
 const Home = () => (
   <div>
-    
     <Hero />
-    <ImageGallery /> {/* Add the Image Gallery here */}
-
-    <Skills />
-    <Projects />
-    <About />
-    <Contact />
+    
+    <div id="skills">
+      <Skills />
+    </div>
+    <div id="projects">
+      <Projects />
+    </div>
+    <div id="about">
+      <About />
+    </div>
+    <div id="contact">
+      <Contact />
+    </div>
     <Footer />
   </div>
 );

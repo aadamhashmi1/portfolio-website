@@ -1,38 +1,33 @@
 // src/components/ThemeToggle.js
 import React, { useState, useEffect } from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
-function ThemeToggle() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Check for saved theme in localStorage or use system preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setIsDarkMode(savedTheme === 'dark');
-    } else {
-      setIsDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    }
-  }, []);
+const ThemeToggle = () => {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   useEffect(() => {
-    // Apply the theme class to the <html> element
-    if (isDarkMode) {
+    if (theme === 'dark') {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
-  }, [isDarkMode]);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
 
   return (
     <button
-      onClick={() => setIsDarkMode(!isDarkMode)}
-      className="p-2 rounded bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+      onClick={toggleTheme}
+      className="text-2xl p-2 rounded-full focus:outline-none"
+      aria-label="Toggle Theme"
     >
-      {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+      {theme === 'light' ? <FaMoon /> : <FaSun />}
     </button>
   );
-}
+};
 
 export default ThemeToggle;
