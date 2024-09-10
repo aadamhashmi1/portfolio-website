@@ -1,12 +1,9 @@
-// src/components/Hero.js
 import React from 'react';
 import Slider from 'react-slick';
 
-// Import the slick carousel styles
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-// Custom arrow components
 const NextArrow = (props) => {
   const { onClick } = props;
   return (
@@ -48,17 +45,16 @@ const PrevArrow = (props) => {
 };
 
 const Hero = () => {
-  // Slider settings
   const settings = {
-    dots: true, // Enable dots at the bottom
+    dots: true, 
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    nextArrow: <NextArrow />, // Custom next arrow
-    prevArrow: <PrevArrow />, // Custom previous arrow
+    nextArrow: <NextArrow />, 
+    prevArrow: <PrevArrow />, 
   };
 
   // Array of image URLs for the slider
